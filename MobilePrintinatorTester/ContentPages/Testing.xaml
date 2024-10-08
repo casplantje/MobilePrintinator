@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilePrintinatorTester.ContentPages.Testing"
+             Title="Testing"
+             xmlns:local="clr-namespace:MobilePrintinatorTester.ViewModels"
+             x:DataType="local:TestingViewModel">
+    <VerticalStackLayout>
+        <Label 
+            Text="Printer test tasks:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+         Text="Text" 
+         Command="{Binding TestTextCommand}"
+         Style="{StaticResource ButtonStyle}" />
+
+        <Button
+         Text="EAN8 barcode"
+         Command="{Binding TestBarcodeEAN8Command}"
+         Style="{StaticResource ButtonStyle}" />
+    </VerticalStackLayout>
+</ContentPage>
